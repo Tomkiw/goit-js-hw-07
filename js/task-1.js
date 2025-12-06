@@ -1,7 +1,7 @@
-const liSearch = document.querySelectorAll("li.item");
-console.log("🚀 ~ liSearch:", liSearch);
+const liSearch = document.querySelectorAll(".item");
+// console.log("🚀 ~ liSearch:", liSearch);
 
-console.log("Nuber of categories:", liSearch.length);
+console.log("Number of categories:", liSearch.length);
 
 liSearch.forEach((li) => {
   const h2 = li.querySelector("h2");
