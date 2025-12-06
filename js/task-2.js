@@ -25,18 +25,49 @@ const images = [
   },
 ];
 
-const ulGalery = document.querySelector(".gallery");
+const galeryEL = document.querySelector(".gallery");
 
 const createLi = images
   .map(
     (img) => `<li class="item-img"><img src="${img.url}" alt="${img.alt}"></li>`
   )
   .join("");
-ulGalery.innerHTML = createLi;
+galeryEL.insertAdjacentHTML("beforeend", createLi);
+
+// ==== attempt number 2 ===
+// const elements = images.map((option) => {
+//   const itemEL = document.createElement("li");
+//   itemEL.classList.add("item-img");
+
+//   const imgEl = document.createElement("img");
+//   imgEl.src = option.url;
+//   imgEl.scr = option.alt;
+
+//   itemEL.append(imgEl); // add <img> to <li>
+
+//   return itemEL;
+// });
+// console.log("🚀 ~ elements:", elements);
+// galeryEL.append(...elements);
+
+// ==== funbction ====
 
 // const createLi = images
-//   .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
+//   .map(
+//     (img) => `<li class="item-img"><img src="${img.url}" alt="${img.alt}"></li>`
+//   )
 //   .join("");
-// // console.log("🚀 ~ createLi:", createLi);
+// galeryEL.innerHTML = createLi;
 
-// ulGalery.innerHTML = createLi;
+//=== ANDRIY ========
+
+// const gallery = document.querySelector(".gallery");
+// const galleryMarkup = images
+//   .map(
+//     ({ url, alt }) =>
+//       `<li class="gallery-item">
+//         <img src="${url}" alt="${alt}" class="gallery-img">
+//       </li>`
+//   )
+//   .join("");
+// gallery.insertAdjacentHTML("beforeend", galleryMarkup);

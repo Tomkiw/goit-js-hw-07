@@ -1,6 +1,5 @@
 const liSearch = document.querySelectorAll("li.item");
 console.log("🚀 ~ liSearch:", liSearch);
-//
 
 console.log("Nuber of categories:", liSearch.length);
 
